@@ -78,34 +78,61 @@ print("projects, courses, hobbies, or anything else relevant.")
 background = input("Tell us about yourself: ")
 
 print()
-print("Thanks! We have your background information.")
-
 print()
-print("===================================")
-print("      ANALYZING YOUR ANSWERS...")
-print("===================================")
+print("Analyzing your answers...")
 print("Finding technology paths worth exploring...")
-
 print()
-print("Here is what you told us:")
-print("Interest:", interest)
-print("Coding:", coding)
-print("Work:", work)
-print("Future goals:", future_goal)
+
+interest_names = {
+    "A": "Artificial Intelligence",
+    "B": "Cybersecurity",
+    "C": "Data Science",
+    "D": "Software Engineering",
+    "E": "Information Technology",
+    "F": "Cloud / DevOps",
+    "G": "Robotics",
+    "H": "UI/UX & Product Design"
+}
+
+coding_names = {
+    "A": "I love coding",
+    "B": "I like coding when the problem is interesting",
+    "C": "I can code, but I don't particularly enjoy it",
+    "D": "I dislike coding",
+    "E": "I've barely tried coding"
+}
+
+work_names = {
+    "A": "Building apps or products",
+    "B": "Creating AI systems",
+    "C": "Finding security problems",
+    "D": "Working with data and finding patterns",
+    "E": "Building robots or smart devices",
+    "F": "Automating repetitive tasks",
+    "G": "Researching and experimenting",
+    "H": "Managing ideas, products, or teams",
+    "I": "I'm not sure yet"
+}
+
+future_goal_names = {
+    "A": "Get a good-paying job",
+    "B": "Have remote or flexible work",
+    "C": "Build my own products or business",
+    "D": "Work with cutting-edge technology",
+    "E": "Have creative freedom",
+    "F": "Make an impact",
+    "G": "Have strong job opportunities",
+    "H": "Become highly skilled in a specific field",
+    "I": "I'm still figuring it out"
+}
+
+print("Your answers:")
+print()
+print("Interest:", interest_names.get(interest, "Not specified"))
+print("Coding:", coding_names.get(coding, "Not specified"))
+print("Work:", work_names.get(work, "Not specified"))
+print("Future goal:", future_goal_names.get(future_goal, "Not specified"))
 print("Background:", background)
-
-user_profile = f"""
-User's technology interests: {interest}
-
-Coding preference: {coding}
-
-Type of work they find interesting: {work}
-
-Future goals: {future_goal}
-
-Background:
-{background}
-"""
 
 print()
 print("User profile created successfully!")
